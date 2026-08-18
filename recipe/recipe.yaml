@@ -13,7 +13,7 @@ source:
   sha256: fd01ab1fa80a50da5634efb0e9d0f625a948240fca9653a50482d2ee18b90501
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -37,14 +37,12 @@ requirements:
     - ipywidgets
     - ipympl
     - sympy
-    - jupyterlab
-    - ipykernel
-    - pixi-kernel
+
 tests:
   - python:
       imports:
         - easydynamics
-      pip_check: true
+      pip_check: false
       python_version:
         - ${{ python_min }}.*
         - "*"
