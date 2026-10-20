@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.10.0"
+  version: "0.12.0"
   python_min: "3.12"
 
 package:
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/E/EasyDynamics/easydynamics-${{ version }}.tar.gz
-  sha256: fd01ab1fa80a50da5634efb0e9d0f625a948240fca9653a50482d2ee18b90501
+  sha256: c787eecc094371a0842e16526592d90ace92623353435a724f143a11e616c33f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
